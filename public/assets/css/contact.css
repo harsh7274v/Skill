@@ -1,0 +1,72 @@
+/* footer */
+.footer-section {
+    margin-top: 0 !important; /* Adjust as needed */
+    /* Other styles... */
+}
+
+.contact-box {
+    margin-bottom: 0 !important; /* Adjust as needed */
+    /* Other styles... */
+}
+footer {
+    padding: 10px 0; /* Increase padding */
+    color: #f4ededfe;
+    background-color: #51555623;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15%; /* Increase padding */
+    align-items: center;
+}
+
+.footer-section {
+    flex: 1;
+    margin-right: 10px;
+    /* Increase margin */
+}
+
+.footer-section h4 {
+    font-size: 18px;
+    margin-bottom: 20px; /* Increase margin */
+    font-weight: bold;
+}
+
+.footer-section p, .footer-section ul li {
+    font-size: 14px;
+    margin-bottom: 15px; /* Increase margin */
+    line-height: 1.5;
+}
+
+.footer-section ul li a {
+    color: #f5eaeafe;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #f6eded;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 15px 0; /* Increase padding */
+    color: #f0e6e6fe;
+    border-top: 1px solid #000000;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 12px;
+}
+/* .footer-section {
+    margin-bottom: 0 !important; 
+} */
+    
+
+#contact-div {
+    margin-top: 0; /* Adjust as needed */
+    /* Other styles... */
+}

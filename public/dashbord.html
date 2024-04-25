@@ -1,0 +1,91 @@
+<!-- public/dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Dashboard</title>
+
+  
+        <style>
+            body {
+                font-family: 'Arial', sans-serif;
+                background-color: rgb(2, 7, 14);/* Soft blue background */
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+            }
+        
+            #dashboard {
+                background-color: #ffffff; /* White background for the dashboard */
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+                padding: 20px;
+                width: 300px;
+            }
+        
+            h1 {
+                color: #5b5b5f; /* Dark grey for the heading */
+                text-align: center;
+                margin-bottom: 20px; /* Added space below the heading */
+            }
+        
+            p {
+                color: #6d7f97; /* Soft blue for paragraph text */
+                font-size: 14px;
+                line-height: 1.6;
+                margin-bottom: 10px; /* Added space below each paragraph */
+            }
+        
+            span {
+                color: #302f2f; /* Bold orange for user details */
+                font-weight: bold;
+            }
+        </style>
+    
+         <!-- <link rel="stylesheet" href="/assets/css/dasboard.css"> -->
+        
+        
+</head>
+<body>
+
+  
+
+
+   
+</div>
+    <div id="dashboard">
+        <h1 style="color:  rgb(63 140 40)">Dashboard</h1>
+        <p>Name: <span id="userName"></span></p>
+        <p>Email: <span id="userEmail"></span></p>
+    </div>
+   <script>
+  // Client-side JavaScript
+  document.addEventListener('DOMContentLoaded', function() {
+    // Delay the fetch request by 2 seconds
+    setTimeout(function() {
+      fetch('/api/user_data')
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          return response.json();
+        })
+        .then(data => {
+          console.log('User data:', data);
+          // Update the dashboard with the user data
+          document.getElementById('userName').textContent = data.name;
+          document.getElementById('userEmail').textContent = data.email;
+        })
+        .catch(error => {
+          console.error('There has been a problem with your fetch operation:', error);
+          document.getElementById('dashboard').textContent = 'Error loading user data.';
+        });
+    }, 2000);
+  });
+   </script>
+    
+</body>
+</html>

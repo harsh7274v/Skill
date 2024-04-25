@@ -1,0 +1,52 @@
+.navbar{
+    width: 100%; /* This will set the width of the navbar to 100% */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0;
+}
+.content {
+    display: flex; /* This will make the child divs align side by side */
+    height: 75vh;
+    padding-top: 60px;
+    margin-top: 55px;
+}
+
+.logo{
+    font-size: 30px;
+    font-weight: bold;
+    color:rgb(42, 226, 73);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 10px 10%;
+}
+.navLinkContainer{
+    margin: 15px 10%;
+
+}
+.navbar ul{
+    display: flex;
+    list-style: none;
+    margin-left: auto;
+}
+
+.navbar ul li{
+    margin-right: 20px;
+
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+    padding: 5px 10px;
+    transition: 0.1s;
+}
+
+.navbar ul li a:hover {
+   
+    color:  #d2d8da;
+    border-radius: 10px;
+    transition: 0.1s;
+    text-decoration: underline;
+}
